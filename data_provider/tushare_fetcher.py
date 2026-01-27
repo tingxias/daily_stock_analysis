@@ -92,6 +92,9 @@ class TushareFetcher(BaseFetcher):
             
             # 获取 API 实例
             self._api = ts.pro_api()
+
+            self._api._DataApi__token = token # 保证有这个代码，不然不可以获取
+            self._api._DataApi__http_url = 'http://lianghua.nanyangqiankun.top'  # 保证有这个代码，不然不可以获取
             
             logger.info("Tushare API 初始化成功")
             
