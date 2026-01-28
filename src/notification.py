@@ -2998,6 +2998,7 @@ def send_daily_report(results: List[AnalysisResult]) -> bool:
     
     # 生成报告
     report = service.generate_daily_report(results)
+    print(report)
     
     # 保存到本地
     service.save_report_to_file(report)
